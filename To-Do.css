@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(140deg, rgb(136, 3, 136), rgb(58, 58, 190));
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.to-do{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 25px;
+    padding-bottom: 40px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+#Add{
+    width: 100px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: orangered;
+    color: white;
+    margin-left: 10px;
+}
+
+#search{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+ul li::before{
+    width: 25px;
+    height: 25px;
+    content: "";
+    border: 1px solid rgb(163, 162, 162);
+    border-radius: 50%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: 5px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    border: none;
+    background-image: url(https://imgs.search.brave.com/vdUk5WpDoBsfKDcNaELVeVavtIP-ZJqKpa5TBVabSTE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudmVyc3VzLmlv/L29iamVjdHMvdGlj/a3RpY2suZnJvbnQu/bWFzdGVyLjE1NzY2/ODQ2NDEwNDUuanBn);
+    transform: scale(1.5);
+}
+
+ul li span{
+    position: absolute;
+    top: 11px;
+    right: 0px;
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+}
+
+ul li span:hover{
+    border: 1px solid rgb(105, 104, 104);
+}
